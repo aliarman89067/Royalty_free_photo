@@ -1,0 +1,111 @@
+.app__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--footer-color);
+    padding: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+.app__footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.app__footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 1rem;
+}
+.app__footer-contact .logo{
+    width: 180px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+.app__footer-contact-box{
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    margin: .5rem 0;
+}
+.app__footer-contact-box h4{
+    color: #fff;
+    font-family: var(--font-base);
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.app__footer-contact-box p,
+.app__footer-links p,
+.app__footer-services p{
+    color:var(--lightgrey);
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight: 300;
+}
+.app__footer-social_links{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 1rem;
+}
+.app__footer-social_links img{
+    margin: 1rem .3rem;
+    cursor: pointer;
+}
+.app__footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 1rem;
+}
+.app__footer-services{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 1rem;
+}
+.app__footer-links h1,
+.app__footer-services h1{
+    color: #fff;
+    font-size: 40px;
+    font-family: var(--font-base);
+}
+.app__footer-links p,
+.app__footer-services p{
+    margin: .5rem 0;    
+}
+@media screen and (max-width:550px) {
+    .app__footer-contact{
+        margin-bottom: 2rem;
+    }
+    .app__footer-contact .logo{
+        width: 150px;
+    }
+    .app__footer-contact-box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .app__footer-social_links{
+        margin: 0;
+    }
+    .app__footer-links{
+        margin-bottom: 2rem;
+    }
+    .app__footer-links h1,
+    .app__footer-services h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:450px) {
+    .app__footer{
+        padding: 2rem 1rem;
+    }
+}

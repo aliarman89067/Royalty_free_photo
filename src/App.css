@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* font-family: 'Lily Script One', cursive;
+font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-color:#171717;
+    --footer-color:#262626;
+    --black:#141414;
+    --grey:#525252;
+    --lightgrey:#D0D0D0;
+    --green:#299641;
+    --font-base:'Poppins', sans-serif;
+    --font-curve:'Lily Script One', cursive;
+}
+body{
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+.app{
+    padding:0 4rem;
+}
+@media screen and (max-width:650px) {
+    .app{
+        padding: 0 3rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .app{
+        padding: 0 2rem;
+    }
+}

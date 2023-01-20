@@ -1,0 +1,177 @@
+.app__trending{
+    display: grid;
+    grid-template-columns:.5fr 1fr;
+    gap: 1rem;
+}
+.app__trending-groupA{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+.app__trending-groupA img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.app__trending-groupA::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     /* ff 3.6+ */
+     background:-moz-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%); 
+
+     /* safari 5.1+,chrome 10+ */
+     background:-webkit-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* opera 11.10+ */
+     background:-o-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* ie 6-9 */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+ 
+     /* ie 10+ */
+     background:-ms-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* global 94%+ browsers support */
+     background:linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     opacity: 0;
+     transition: all .5s ease-in-out;
+}
+.app__trending-groupA:hover::before{
+    opacity: 1;
+}
+.app__trending-groupA h3{
+    position: absolute;
+    color: #fff;
+    font-family: var(--font-base);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 45px;
+    z-index: 10;
+    bottom: 90px;
+    left: -60%;
+    transition: all .5s ease;
+    max-width: 300px;
+}
+.app__trending-groupA:hover h3{
+   left: 20px;
+}
+
+.app__trending-groupA p{
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    font-family: var(--font-base);
+    bottom: 30px;
+    left: -110%;
+    max-width: 70%;
+    transition: all .5s ease;
+    transition-delay:.2s;
+}
+.app__trending-groupA:hover p{
+    left: 20px;
+}
+
+.app__trending-groupB{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.app__trending-groupB-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+.app__trending-groupB-img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     /* ff 3.6+ */
+     background:-moz-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%); 
+
+     /* safari 5.1+,chrome 10+ */
+     background:-webkit-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* opera 11.10+ */
+     background:-o-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* ie 6-9 */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF', GradientType=1 );
+ 
+     /* ie 10+ */
+     background:-ms-linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+ 
+     /* global 94%+ browsers support */
+     background:linear-gradient(23deg, rgba(0, 0, 0, 0.61) 0%, rgba(255, 255, 255, 0) 100%);
+     opacity: 0;
+     transition: all .5s ease-in-out;
+}
+.app__trending-groupB-img:hover::before{
+    opacity: 1;
+}
+.app__trending-groupB-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.app__trending-groupB-img h3{
+    position: absolute;
+    color: #fff;
+    font-family: var(--font-base);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 45px;
+    z-index: 10;
+    bottom: 90px;
+    left: -60%;
+    transition: all .5s ease;
+    max-width: 250px;
+}
+.app__trending-groupB-img:hover h3{
+    left: 20px;
+}
+.app__trending-groupB-img p{
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    font-family: var(--font-base);
+    bottom: 30px;
+    left: -110%;
+    max-width: 70%;
+    transition: all .5s ease;
+    transition-delay:.2s;
+}
+.app__trending-groupB-img:hover p{
+    left: 20px;
+}
+@media screen and (max-width:750px) {
+    .app__trending{
+        grid-template-columns:1fr;
+    }
+}
+@media screen and (max-width:1300px){
+    .app__trending-groupA h3{
+        display: none;
+    }
+    .app__trending-groupA p{
+        display: none;
+    }
+    .app__trending-groupB-img h3{
+        display: none;
+    }
+    .app__trending-groupB-img p{
+        display: none;
+    }
+}
+@media screen and (max-width:600px) {
+    .app__trending-groupB{
+        grid-template-columns: 1fr;
+    }
+}
